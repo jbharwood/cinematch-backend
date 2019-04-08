@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20190406154611) do
 
   create_table "feeds", force: :cascade do |t|
     t.string "name"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
