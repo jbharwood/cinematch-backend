@@ -12,7 +12,7 @@ class WatchlistsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create watchlist" do
     assert_difference('Watchlist.count') do
-      post watchlists_url, params: { watchlist: { imdb_id: @watchlist.imdb_id, omdb_id: @watchlist.omdb_id, title: @watchlist.title } }, as: :json
+      post watchlists_url, params: { watchlist: { poster: @watchlist.poster, user_id: @watchlist.user_id,  imdb_id: @watchlist.imdb_id, omdb_id: @watchlist.omdb_id, title: @watchlist.title } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class WatchlistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update watchlist" do
-    patch watchlist_url(@watchlist), params: { watchlist: { imdb_id: @watchlist.imdb_id, omdb_id: @watchlist.omdb_id, title: @watchlist.title } }, as: :json
+    patch watchlist_url(@watchlist), params: { watchlist: { poster: @watchlist.poster, :user_id: @watchlist.user_id,  imdb_id: @watchlist.imdb_id, omdb_id: @watchlist.omdb_id, title: @watchlist.title } }, as: :json
     assert_response 200
   end
 

@@ -4,8 +4,12 @@ one:
   title: MyString
   omdb_id: 1
   imdb_id: MyString
+  user_id: 1
+  poster: MyString
 
 two:
   title: MyString
   omdb_id: 1
   imdb_id: MyString
+  user_id: 1
+  poster: MyString

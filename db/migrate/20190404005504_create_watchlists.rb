@@ -4,6 +4,7 @@ class CreateWatchlists < ActiveRecord::Migration[5.1]
       t.string :title
       t.integer :omdb_id
       t.string :imdb_id
+      t.integer :user_id
 
       t.timestamps
     end
