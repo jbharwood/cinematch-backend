@@ -46,6 +46,6 @@ class WatchlistsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def watchlist_params
-      params.require(:watchlist).permit(:title, :omdb_id, :imdb_id, :user_id, :poster)
+      params.require(:watchlist).permit(:title, :omdb_id, :imdb_id, :user_id, :poster, :watched)
     end
 end
