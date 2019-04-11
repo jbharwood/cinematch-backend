@@ -15,13 +15,28 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    user = User.new(
+			name: params[:name],
+			username: params[:username],
+			password: params[:password]
+		)
 
-    if @user.save
-      render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
+		if user.save
+			# JWT.encode(payload, 'secret')
+			jwt = encode_token({user_id: user.id})
+
+
+			render json: {user: UserSerializer.new(user), jwt: jwt}
+		else
+			render json: {errors: user.errors.full_messages}
+		end
+    # @user = User.new(user_params)
+    #
+    # if @user.save
+    #   render json: @user, status: :created, location: @user
+    # else
+    #   render json: @user.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /users/1
