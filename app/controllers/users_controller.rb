@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   # POST /users
   def create
     user = User.new(
-			name: params[:name],
 			username: params[:username],
 			password: params[:password]
 		)
