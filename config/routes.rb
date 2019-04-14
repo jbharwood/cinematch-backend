@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :feed_users
   resources :likes
   resources :posts
   resources :feeds
