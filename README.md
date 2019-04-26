@@ -1,24 +1,24 @@
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Mod 5 Final Project
+Created by Joseph Harwood
 
-Things you may want to cover:
+## CINEMATCH: DESCRIPTION
+- Cinematch is a web application that helps you find the next tv show or movie that you want to watch. Users can search for any movie or tv show and get recommended similar movies or tv shows. You can add movie or tv shows to your watchlist and share them to a chat for other people to see and discuss.
 
-* Ruby version
+## INSTALL INSTRUCTIONS
+- Clone down this repo
+- Run "bundle install"
+- Run "rake db:migrate"
+- Run "rake db:seed"
+- Open up a rails server
+- In your browser, visit your local host at the path '/login' to get started
 
-* System dependencies
+## CONTRIBUTORS GUIDE
+1. Fork and clone this repo
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See Backend Repo**** https://github.com/jbharwood/cinematch-backend

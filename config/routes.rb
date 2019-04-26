@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
 	# login on refresh
 	get '/auto_login', to: "auth#auto_login"
-
+  
 end
