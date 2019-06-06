@@ -1,10 +1,24 @@
-development:
-  adapter: async
-
-test:
-  adapter: async
-
-production:
-  adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: cinematch_backend_production
+# development:
+#   adapter: async
+#
+# test:
+#   adapter: async
+#
+# production:
+#   adapter: redis
+#   url: redis://localhost:6379/1
+#   channel_prefix: cinematch_backend_production
+development: &development
+  :url: redis://localhost:6379
+  :host: localhost
+  :port: 6379
+  :timeout: 1
+  :inline: true
+test: *development
+production: &production
+  :url: redis://redistogo:7a13a5ec67f03c73ed3aeecad064e7c4@pearlfish.redistogo.com:10020
+  :host: pearlfish.redistogo.com
+  :port: 10020
+  :password: 7a13a5ec67f03c73ed3aeecad064e7c4
+  :inline: true
+  :timeout: 1

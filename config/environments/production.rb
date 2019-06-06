@@ -80,4 +80,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # for websockets
+  config.middleware.use ChatActionCable
+  config.web_socket_server_url = "wss://cinematch-jbharwood.herokuapp.com/"
+
 end
